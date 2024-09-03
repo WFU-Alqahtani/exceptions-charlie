@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Exception {
@@ -7,8 +8,10 @@ public class Exception {
         Scanner index = new Scanner(System.in);
         try {
             System.out.println(arr[index.nextInt()]);
-        } catch (ArrayIndexOutOfBoundsException e){
-            System.out.println("Invalid Index");
+        } catch (ArrayIndexOutOfBoundsException | InputMismatchException e){
+            System.out.println(e);
+            System.out.println("Problem with code detected");
+
         }
     }
 }
